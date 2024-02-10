@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        button {
+            margin-left: 10%;
+            position: fixed;
+            width: 89px;
+            height: 36px;
+            background-color: #bc8f8fa1;
+            color: white;
+            font-size: 18px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Bulb ON & OFF</h3>
+    <img src="bulb-ON.png" alt="bulb-ON" id="bulbImg">
+    <button onclick="turnOffOn()" id="myBtn">Turn Off</button>
+
+    <script>
+    
+    function turnOffOn(){
+
+        var imageElement = document.getElementById("bulbImg");   
+        var buttonElement = document.getElementById("myBtn");
+       
+
+        if(imageElement.src.includes("ON")){
+
+            imageElement.src="bulb-OFF.png";
+            buttonElement.innerText="Turn On";
+            
+        }
+
+        else{
+
+            imageElement.src="bulb-ON.png";            
+            buttonElement.innerText="Turn Off";
+            
+        }
+
+    }
+        
+        
+
+
+    </script>
+</body>
+</html>
